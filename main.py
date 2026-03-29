@@ -5,15 +5,13 @@ from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-# 1. BOT TOKEN (BotFather dan olganingizni qo'ying)
+# 1. BOT TOKEN
 TOKEN = "8787110745:AAFd7HzZ8YucGRvLhETCnw8a9Lvew2knbGU"
 
 dp = Dispatcher()
 
-# GitHub manzillari
-BASE_URL = "https://raw.githubusercontent.com/11111111111111118/-t.me-alixon_portfolio_bot/main/Sertifikatlarim"
-DIR_5M = f"{BASE_URL}/5%20million%20dasturchi"
-DIR_COURSERA = f"{BASE_URL}/Coursera"
+# GitHub manzili (Sertifikatlarim/ papkasi olib tashlandi, chunki fayllar ochiq turibdi)
+BASE_URL = "https://raw.githubusercontent.com/11111111111111118/alixon_portfolio_bot/main"
 
 # --- MENYULAR ---
 
@@ -31,28 +29,24 @@ def cert_menu(category):
     buttons = []
     if category == "ai":
         buttons = [
-            [InlineKeyboardButton(text="🧠 Amaliy Sun'iy intellekt", url=f"{DIR_5M}/Amaliy%20Sun'iyintellekt.pdf")],
-            [InlineKeyboardButton(text="🛡 Kiberxavfsizlik asoslari", url=f"{DIR_5M}/80%20%20KIBERXAVFSIZLIK%20ASOSLARI.pdf")],
-            [InlineKeyboardButton(text="🤖 AI Prompters", url=f"{DIR_5M}/Five%20Million%20AI%20Prompters.pdf")],
-            [InlineKeyboardButton(text="📈 GPTni noldan o'rganish", url=f"{DIR_5M}/GPTni%20noldan%20o%E2%80%98rganish.pdf")],
-            [InlineKeyboardButton(text="🎭 Sun'iy intellektdan foydalanish", url=f"{DIR_5M}/Sun%E2%80%99iy%20intellektlardan%20foydalanish.pdf")]
+            [InlineKeyboardButton(text="🧠 Amaliy Sun'iy intellekt", url=f"{BASE_URL}/Amaliy%20Sun'iyintellekt.pdf")],
+            [InlineKeyboardButton(text="🛡 Kiberxavfsizlik asoslari", url=f"{BASE_URL}/80%20KIBERXAVFSIZLIK%20ASOSLARI.pdf")],
+            [InlineKeyboardButton(text="🤖 AI Prompters", url=f"{BASE_URL}/Five%20Million%20AI%20Prompters.pdf")],
+            [InlineKeyboardButton(text="📈 GPTni noldan o'rganish", url=f"{BASE_URL}/GPTni%20noldan%20o%E2%80%98rganish.pdf")]
         ]
     elif category == "it":
         buttons = [
             [InlineKeyboardButton(text="🐍 Django asoslari", url=f"{BASE_URL}/Qosimov%20Alixon--.pdf")],
-            [InlineKeyboardButton(text="🌐 Frontend", url=f"{DIR_5M}/Frontend.pdf")],
-            [InlineKeyboardButton(text="💾 Ma'lumotlar bazasi", url=f"{DIR_5M}/MA'LUMOTLAR%20BAZASI.pdf")],
-            [InlineKeyboardButton(text="🎮 Unity Junior Programmer", url=f"{DIR_5M}/Unity%20%20Junior%20Programmer.pdf")],
-            [InlineKeyboardButton(text="🎨 Web Design", url=f"{DIR_5M}/WEB%20DESIGN.pdf")],
-            [InlineKeyboardButton(text="📊 Grafik dizayn", url=f"{DIR_5M}/Grafik%20dizayn.pdf")]
+            [InlineKeyboardButton(text="🌐 Frontend", url=f"{BASE_URL}/Frontend.pdf")],
+            [InlineKeyboardButton(text="💾 Ma'lumotlar bazasi", url=f"{BASE_URL}/MA'LUMOTLAR%20BAZASI.pdf")],
+            [InlineKeyboardButton(text="🎮 Unity Junior Programmer", url=f"{BASE_URL}/Unity%20Junior%20Programmer.pdf")],
+            [InlineKeyboardButton(text="🎨 Web Design", url=f"{BASE_URL}/WEB%20DIZAYN.pdf")]
         ]
     elif category == "coursera":
         buttons = [
-            [InlineKeyboardButton(text="🎓 Responsive Design (U. Michigan)", url=f"{DIR_COURSERA}/Coursera%20Advanced%20Styling%20with%20Responsive%20Design.pdf")],
-            [InlineKeyboardButton(text="🛡 Cybersecurity Case Studies (IBM)", url=f"{DIR_COURSERA}/Coursera%20Cybersecurity%20Case%20Studies%20and%20Capstone%20Project.pdf")],
-            [InlineKeyboardButton(text="🐳 Docker & Kubernetes (IBM)", url=f"{DIR_COURSERA}/Coursera%20Docker%2C%20Kubernetes.pdf")],
-            [InlineKeyboardButton(text="⚙️ Robotatexnika (Siemens)", url=f"{DIR_COURSERA}/Coursera%20Robotatexnika.pdf")],
-            [InlineKeyboardButton(text="📜 HTML5 Introduction", url=f"{DIR_COURSERA}/Coursera%20Introduction%20to%20HTML5.pdf")]
+            [InlineKeyboardButton(text="🎓 Responsive Design", url=f"{BASE_URL}/Coursera%20Advanced%20Styling%20with%20Responsive%20Design.pdf")],
+            [InlineKeyboardButton(text="⚙️ Robotatexnika", url=f"{BASE_URL}/Coursera%20Robotatexnika.pdf")],
+            [InlineKeyboardButton(text="📜 HTML5 Introduction", url=f"{BASE_URL}/Coursera%20Introduction%20to%20HTML5.pdf")]
         ]
     elif category == "win":
         buttons = [
